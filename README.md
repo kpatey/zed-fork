@@ -21,12 +21,13 @@ The capture commit is also tagged locally as `capture-2026-11-25-a3ce8d5`.
 
 ## License split (as of November 25, 2026)
 
-Across 263 crates:
+From `cargo metadata` across 264 crates (263 explicit workspace members plus `copilot_ui`, a path-dependency member):
 
-- 210 crates GPL-3.0-or-later
+- 212 crates GPL-3.0-or-later
 - 44 crates Apache-2.0
-- 8 crates with a GPL license file but no license field in `Cargo.toml`
-- 1 crate (`syntax_theme`) under both licenses
+- 8 crates with a LICENSE-GPL file but no license field in `Cargo.toml`
+
+An earlier count over the 263 explicit members gave 210 GPL-3.0-or-later, plus `syntax_theme` as dual-licensed. In the cargo-metadata count, `syntax_theme` is GPL-3.0-or-later and carries both license files.
 
 AGPL was dropped in commit `27c566c2` ([#57948](https://github.com/zed-industries/zed/pull/57948), 2026-05-28).
 
